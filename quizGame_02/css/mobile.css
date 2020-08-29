@@ -1,0 +1,25 @@
+@media screen and (max-width: 480px){
+    body{
+        width: 80%;
+        height: 80%;
+    }
+
+    /* タイトル */
+    .title{
+        font-size: 18px;
+        position: absolute;
+        top: 3%;
+        text-align: center;
+    }
+
+    /* メインテキスト */
+    .mainText{
+        font-size: 12px;
+        line-height: 1.2em;
+    }
+
+    /* プレイボタン */
+ 
+
+
+}
