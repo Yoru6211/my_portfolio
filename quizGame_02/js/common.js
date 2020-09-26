@@ -1,5 +1,5 @@
 const mainText = document.querySelector('.mainText');
-const imageQuestion = document.querySelector('.imageQuestion');
+const questionImage = document.querySelector('.questionImage');
 const playBtn = document.querySelector('.playBtn');
 const answerBtn01 = document.querySelector('.answerBtn01');
 const answerBtn02 = document.querySelector('.answerBtn02');
@@ -15,7 +15,7 @@ const answerBtn = [
     answerBtn04,
 ];
 const nextBtn = document.querySelector('.nextBtn');
-const imageQuestions = [
+const questionImages = [
     "img/UnitedKingdom.png",
     "img/Turkey.png",
     "img/Switzerland.png",
@@ -70,51 +70,52 @@ const judgment = () =>{
     });
 }
 
+
 // スタート＆１問目
 
 const start =  () =>{
-    playBtn.onclick = () =>{
-        mainText.textContent = 'これはどこの国の国旗でしょう？';
-        imageQuestion.src = imageQuestions[imageNo];
-        playBtn.style.display = 'none';
-        answerBtnDisplay.style.display = 'block';
-        answer();
-        judgment();
-    }
+    playBtn.addEventListener('click', () =>{
+            mainText.textContent = 'これはどこの国の国旗でしょう？';
+            questionImage.src = questionImages[imageNo];
+            playBtn.style.display = 'none';
+            answerBtnDisplay.style.display = 'block';
+            answer();
+            judgment();
+    });
 }
 start();
 
 // 2問目〜１０問目
 const nextQuestion = () =>{   
-    nextBtn.onclick = () =>{
+    nextBtn.addEventListener('click', ()=>{
         if(correct01 < 9){
             correct01 += 1;
             correctArray += 1;
             imageNo += 1;
             answerArray += 1;
-            imageQuestion.src = imageQuestions[imageNo];
+            questionImage.src = questionImages[imageNo];
             judgmentText.textContent = '';
             nextBtn.style.display ='none';
             answer();
             judgment();
         }else{
             mainText.textContent = 'クイズはこれで終了です。もう一度挑戦したいときは「最初に戻る」ボタンを押してください。';
-            imageQuestion.src = 'img/nationalFlags_02.png';
+            questionImage.src = 'img/nationalFlags_02.png';
             judgmentText.style.display = 'none';
             answerBtnDisplay.style.display = 'none';
             nextBtn.style.display = 'none';
             restartBtn.style.display = 'block';
             restart();
         }
-    }
+    });
 }
 nextQuestion();
 
 // 最初に戻る
 const restart = () =>{
-    restartBtn.onclick = () =>{
+    restartBtn.addEventListener('click', () =>{
         document.location.reload();
-    }
+    });
 }
 
 

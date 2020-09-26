@@ -54,6 +54,12 @@ body{
    margin-top: 40px;
 }
 
+.playBtn:hover{
+    background-color: rgb(12, 218, 245);
+    color: rgb(255, 255, 255);
+}
+
+
 
 /* 解答ボタン */
 #answerSelect > input{
