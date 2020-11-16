@@ -1,3 +1,3 @@
 # quiz_game
 add my productions
-<img src="https://github.com/Yoru6211/quiz_game/blob/test-images/ppelPoKcRbKPbdIFyJo_Mw.jpg" widht="300" height="auto">
+<img src="https://github.com/Yoru6211/quiz_game/blob/test-images/ppelPoKcRbKPbdIFyJo_Mw.jpg" widht="90" height="auto">
